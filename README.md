@@ -171,7 +171,7 @@ npm start
     │     │
     │     ├── Todo.js                    # todo item 元件
     │     │
-    │     └──TodoList.js                 # 包裹所有 todo item 的元件
+    │     └── TodoList.js                 # 包裹所有 todo item 的元件
     │     
     ├── /containers                      # 存放包裹笨元件的以跟 Redux 溝通的元件  
     │     │
