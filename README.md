@@ -1,6 +1,8 @@
 # Todo List
 
-這份作業是從 Redux 的 [Todo List](https://redux.js.org/basics/example) 延伸，請改寫原本的程式碼，串接對應的 API，文件列在下方，您不需要實作也不應該修改 server-side 的程式碼，如果有任何問題歡迎來信詢問。
+這份作業是從 Redux 的 [Todo List](https://redux.js.org/basics/example) 延伸，請改寫原本的程式碼，串接對應的 API，文件列在下方，您不需要實作也不應該修改 server-side 的程式碼，如果有任何問題歡迎來信詢問。<br><br>
+
+*拉到檔案最下方，有新增串接 API 之後的程式碼架構圖，以方便您們檢查*
 
 ## 使用說明
 
