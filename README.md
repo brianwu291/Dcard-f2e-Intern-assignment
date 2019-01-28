@@ -127,3 +127,63 @@ npm start
   "error": "Not found"
 }
 ```
+## Project Struture
+
+以下是串接 API 後的專案架構<br>
+
+```
+├── README.md                            # 簡易說明文件
+├── package.json                         # 專案資訊
+├── package-lock.json                    # 各種 package、dependency 安裝資訊
+├── .gitignore                           # 控制不上傳 GitHub
+│
+├── /public                              # 存放 html 檔案
+│     │
+│     └── index.html                     # React render 的 .html file.
+│
+├── /node_modules                        # 各種 package、depenency source code
+│
+└── /src                                 # 前端 React.js file (components)
+    │
+    ├── index.js                         # 專案 render 起點
+    │
+    ├── /actions                         # 存放 acion creator，handle API 串接
+    │     │
+    │     ├── index.js                   # 負責輸出所有 action
+    │     ├── todoActions.js             # handle 作業要求的 API 串接
+    │     └── todoActionType.js          # 輸出 action-type 字串變數，避免 typo
+    │
+    ├── /components                      # 存放所有 react 笨元件
+    │     │
+    │     ├── App.js                     # 頂層元件，引入 redux、redux-thunk
+    │     │                            
+    │     ├── /todobuttons               # 存放 todo item 的編輯與刪除元件
+    │     │    ├── DeleteButton.js       # 刪除按鈕元件
+    │     │    └── EditInput             # 編輯表單與按鈕按鈕元件
+    │     │     
+    │     ├── Footer.js                  # 切換 todo item 顯示狀態欄
+    │     │
+    │     │
+    │     ├── Link.js                    # 切換 todo item 的按鈕元件
+    │     │
+    │     │
+    │     ├── Todo.js                    # todo item 元件
+    │     │
+    │     └──TodoList.js                 # 包裹所有 todo item 的元件
+    │     
+    ├── /containers                      # 存放包裹笨元件的以跟 Redux 溝通的元件  
+    │     │
+    │     ├── AddTodo.js                 # Render todo item 的元件
+    │     │
+    │     ├── FilterLink.js              # 包裹 Link 元件，使它取得 Redux 的 state
+    │     │
+    │     └── VisibleTodoList.js         # 包裹 TodoList 元件，使它取得 Redux 的 state
+    │
+    └── /reducers                        # 接收 dispatch 來的 action 或函數，處理後傳回 redux   
+          │
+          ├── index.js                   # 把兩個 reducer 結合輸出，並命名 state 的 key name
+          │
+          ├── todos.js                   # handle 所有與 todo item 直接相關的 state
+          │
+          └── visibilityFilter.js        # handle 與 todo item 狀態顯示的 state
+```
